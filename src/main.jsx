@@ -5,17 +5,28 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Root from './pages/root';
 import Home from './pages/Home';
-import AuthProvider from './firebase/AuthProvider';
+import LayOut from './pages/LayOut';
+import AuthProvider from './fireBase/AuthProvider';
+import Register from './pages/Register';
+import Login from './pages/Login';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root></Root>,
+    element:<LayOut></LayOut>,
+    
     children:[
       {
         path:'/',
         element:<Home></Home>
+      },
+      {
+        path:'/register',
+        element: <Register></Register>
+      },
+      {
+        path: '/signin',
+        element: <Login></Login>
       }
 
     ]

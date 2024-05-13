@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAHhR7x2DR3NTzFf0kvN1Xmpr8SmA_IH0Q",
-  authDomain: "cure-hospital-f4a48.firebaseapp.com",
-  projectId: "cure-hospital-f4a48",
-  storageBucket: "cure-hospital-f4a48.appspot.com",
-  messagingSenderId: "92412928096",
-  appId: "1:92412928096:web:e2980971c0f8137e7b2305"
+  apiKey:import.meta.env.VITE_apiKey,
+  authDomain:import.meta.env.VITE_authDomain,
+  projectId:import.meta.env.VITE_projectId,
+  storageBucket:import.meta.env.VITE_storageBucket,
+  messagingSenderId:import.meta.env.VITE_messagingSenderId,
+  appId:import.meta.env.VITE_appId
 };
 
 // Initialize Firebase

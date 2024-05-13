@@ -2,13 +2,13 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
 
-const Root = () => {
+const LayOut = () => {
     return (
-        <div>
+        <div className="relative">
             <Navbar></Navbar>
             <Outlet></Outlet>
         </div>
     );
 };
 
-export default Root;
+export default LayOut;

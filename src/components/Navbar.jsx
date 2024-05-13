@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Tooltip } from "react-tooltip";
 import { useContext } from "react";
-import { AuthContext } from "../firebase/AuthProvider";
+import { AuthContext } from "../fireBase/AuthProvider";
 
 const Navbar = () => {
     const {user,userLogOut}=useContext(AuthContext)
@@ -47,8 +47,8 @@ const Navbar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                     <li><Link to={'/'} className="font-semibold">Home</Link></li>
-                        <li><Link to={'/allcrafts'} className="font-semibold">All Art & craft Items</Link></li>
-                        <li><Link to={'/addcrafts'} className="font-semibold">Add Item</Link></li>
+                        <li><Link to={'/alldoctors'} className="font-semibold">Docors</Link></li>
+                        <li><Link to={'/blogs'} className="font-semibold">Blogs</Link></li>
                         <li><Link to={`/myitems/${user?.email}`} className="font-semibold">My Art & Craft List</Link></li>
                         {
                             user && <div>
@@ -87,7 +87,7 @@ const Navbar = () => {
                     {
                         !user && <div>
                              <Link to={'/register'}><button className="bg-gray-400 p-2 text-white rounded-md mr-2">Register</button></Link> 
-                             <Link to={'/login'}><button className="bg-green-400 p-2 text-white rounded-md ">Log In</button></Link> 
+                             <Link to={'/signin'}><button className="bg-green-400 p-2 text-white rounded-md ">Log In</button></Link> 
                         </div>
                     }
                     
