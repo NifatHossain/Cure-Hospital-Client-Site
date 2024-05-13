@@ -68,7 +68,8 @@ const Navbar = () => {
                 <div className="navbar-end relative z-20">
                     {
                         user && <div>
-                            <div id='avater' className="dropdown dropdown-end">
+                            <div id='avater' className="dropdown dropdown-end flex items-center">
+                            <button onClick={handleLogOut} className="bg-gray-400 p-2 text-white rounded-md mr-2">Log Out</button>
                                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                                     <div className="w-10 rounded-full">
                                     <img alt="user Image" src={user.photoURL} />
@@ -80,7 +81,7 @@ const Navbar = () => {
                             </div>
                             <Tooltip anchorSelect="#avater" style={{ backgroundColor: "rgb(241 245 249)", color: "#222" }} clickable>
                                 <p className="text-center">{user.displayName}</p>
-                                 <button onClick={handleLogOut} className="border-2 bg-slate-100 px-2 py-1 rounded-md font-semibold">Log Out</button>
+                                 
                             </Tooltip>
                         </div>
                     }
