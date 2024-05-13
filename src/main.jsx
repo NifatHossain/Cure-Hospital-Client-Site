@@ -10,11 +10,12 @@ import LayOut from './pages/LayOut';
 import AuthProvider from './fireBase/AuthProvider';
 import Register from './pages/Register';
 import Login from './pages/Login';
+import ErrorPage from './pages/ErrorPage';
 const router = createBrowserRouter([
   {
     path: "/",
     element:<LayOut></LayOut>,
-    
+    errorElement: <ErrorPage />,
     children:[
       {
         path:'/',
