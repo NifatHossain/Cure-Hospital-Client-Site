@@ -3,6 +3,7 @@ import { FcGoogle } from "react-icons/fc"
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../fireBase/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const Login =() => {
     const location= useLocation();
@@ -46,6 +47,7 @@ const Login =() => {
               })
             console.log(result.user)
             // navigate('/updateInfo')
+            setTimeout(()=>navigate(location?.state? location.state:'/'),2000)
         })
         .catch(error=>{
             Swal.fire({
@@ -60,6 +62,9 @@ const Login =() => {
 
     return (
         <div className="bg-[url('https://i.ibb.co/DY1w78j/login-bg.png')] bg-center bg-cover h-screen pt-10">
+            <Helmet>
+                <title>Login Page</title>
+            </Helmet>
             <div className="flex flex-col gap-4 justify-center w-1/4 mx-auto border p-7 backdrop-blur-xl rounded-lg ">
                 <h2 className="text-3xl  font-semibold text-blue-500 text-center">Login</h2>
                 <div className="flex justify-center">

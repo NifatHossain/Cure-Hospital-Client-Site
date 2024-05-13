@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../fireBase/AuthProvider";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
     const {registerUser,updateUserInfo}=useContext(AuthContext)
@@ -43,6 +44,9 @@ const Register = () => {
     }
     return (
         <div className="bg-slate-100">
+            <Helmet>
+                <title>Registration Page</title>
+            </Helmet>
         <div className="max-w-5xl mx-auto">
         <h2 className="text-center font-semibold text-4xl text-blue-500 py-4">Registration</h2>
            <div className="rounded-xl grid grid-cols-2 gap-4 items-center justify-center  bg-white p-10">

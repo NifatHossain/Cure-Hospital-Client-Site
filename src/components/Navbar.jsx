@@ -42,7 +42,7 @@ const Navbar = () => {
                         
                     </ul>
                     </div>
-                    <Link to={'/'} className="btn btn-ghost text-xl">Aesthetic Pottery</Link>
+                    <Link to={'/'} className="ml-4"><img className="w-1/2" src="https://i.ibb.co/GCcBVt2/Screenshot-2024-05-13-102902.png" alt="" /></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
