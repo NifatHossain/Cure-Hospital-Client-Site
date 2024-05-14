@@ -39,16 +39,16 @@ const Navbar = () => {
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         <li><Link to={'/'} className="font-semibold">Home</Link></li>
-                        <li><Link to={'/alldoctors'} className="font-semibold">Doctors</Link></li>
+                        <li><Link to={'/alltreatments'} className="font-semibold">Avilable Treatments</Link></li>
                         <li><Link to={'/blogs'} className="font-semibold">Blogs</Link></li>
                         {/* <li><Link to={`/myitems/${user?.email}`} className="font-semibold">My Art & Craft List</Link></li> */}
                         {
                             user && <div>
                                 <li>
-                                    <a>Parent</a>
+                                    <a className="font-semibold">Dashboard</a>
                                     <ul className="p-2">
-                                        <li><Link to={`/myitems/${user?.email}`} className="font-semibold">My Art & Craft List</Link></li>
-                                        <li><Link to={`/myitems/${user?.email}`} className="font-semibold">My Art & Craft List</Link></li>
+                                        <li><Link to={`/addtreatments`} className="font-semibold">Add New Treatment</Link></li>
+                                        <li><Link to={`/viewmytreatments/${user?.email}`} className="font-semibold">Show My Treatments</Link></li>
                                     </ul>
                                 </li>
                             </div>
@@ -61,17 +61,17 @@ const Navbar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                     <li><Link to={'/'} className="font-semibold">Home</Link></li>
-                        <li><Link to={'/alldoctors'} className="font-semibold">Docors</Link></li>
+                        <li><Link to={'/alltreatments'} className="font-semibold">Avilable Treatments</Link></li>
                         <li><Link to={'/blogs'} className="font-semibold">Blogs</Link></li>
-                        <li><Link to={`/myitems/${user?.email}`} className="font-semibold">My Art & Craft List</Link></li>
+                        {/* <li><Link to={`/myitems/${user?.email}`} className="font-semibold">My Art & Craft List</Link></li> */}
                         {
                             user && <div>
                                 <li>
                                     <details>
-                                        <summary>Parent</summary>
+                                        <summary className="font-semibold">Dashboards</summary>
                                         <ul className="p-2">
-                                            <li><a>Submenu 1</a></li>
-                                            <li><a>Submenu 2</a></li>
+                                        <li><Link to={`/addtreatments`} className="font-semibold">Add New Treatment</Link></li>
+                                        <li><Link to={`/viewmytreatments/${user?.email}`} className="font-semibold">Show My Treatments</Link></li>
                                         </ul>
                                     </details>
                                 </li>

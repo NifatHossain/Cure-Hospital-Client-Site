@@ -104,7 +104,7 @@ const Slider = () => {
                     <div className="bg-cover bg-center h-[250px] md:h-[550px] flex flex-col justify-center items-center p-5 lg:px-40 bg-slate-200 " >
                             <div className="absolute inset-0 backdrop-blur-xl"></div>
                             <div className="flex flex-row-reverse gap-6 items-center">
-                                <Slide direction='up'><div className="h-full w-[130%]"><img src="https://i.ibb.co/9WcT6vt/slider1-image.png" alt="" /></div></Slide>
+                                <Slide direction='right'><div className="h-full w-[130%]"><img src="https://i.ibb.co/9WcT6vt/slider1-image.png" alt="" /></div></Slide>
                                 <div className="flex flex-col gap-3 w-1/2">
                                     <Slide direction='down'><div className="flex items-center  gap-2 ">
                                         <p className="text-3xl font-bold">Technology Meets Experience</p>
