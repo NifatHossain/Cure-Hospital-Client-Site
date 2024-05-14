@@ -23,7 +23,7 @@ const Navbar = () => {
             console.log(error.message)
             Swal.fire({
                 title: 'Error',
-                text: 'Failed to  Log Out',
+                text: 'Failed to Log Out',
                 icon: 'Error',
                 confirmButtonText: 'okay'
               })

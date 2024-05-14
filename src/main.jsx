@@ -11,6 +11,8 @@ import AuthProvider from './fireBase/AuthProvider';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import ErrorPage from './pages/ErrorPage';
+import AddTreatments from './pages/AddTreatments';
+import PrivateRoute from './fireBase/PrivateRoute';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: '/signin',
         element: <Login></Login>
+      },
+      {
+        path:'/addtreatments',
+        element:<PrivateRoute><AddTreatments></AddTreatments></PrivateRoute>
       }
 
     ]

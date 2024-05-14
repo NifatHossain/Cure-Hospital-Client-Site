@@ -2,8 +2,9 @@
 
 const AllTreatments = () => {
     return (
-        <div>
+        <div className="">
             
+
         </div>
     );
 };
