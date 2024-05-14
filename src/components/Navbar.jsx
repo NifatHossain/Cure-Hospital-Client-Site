@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Tooltip } from "react-tooltip";
 import { useContext } from "react";
 import { AuthContext } from "../fireBase/AuthProvider";
+import Swal from "sweetalert2";
+
 
 const Navbar = () => {
     const {user,userLogOut}=useContext(AuthContext)
@@ -10,14 +12,26 @@ const Navbar = () => {
         userLogOut()
         .then(()=>{
             console.log('Successfully Logged Out')
+            Swal.fire({
+                title: 'Success',
+                text: 'Successfully Logged Out',
+                icon: 'success',
+                confirmButtonText: 'okay'
+              })
         })
         .catch((error)=>{
             console.log(error.message)
+            Swal.fire({
+                title: 'Error',
+                text: 'Failed to  Log Out',
+                icon: 'Error',
+                confirmButtonText: 'okay'
+              })
         })
     }
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-base-100 border-b-8 border-blue-400">
                 <div className="navbar-start relative z-10">
                     <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
