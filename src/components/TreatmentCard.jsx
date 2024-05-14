@@ -5,11 +5,7 @@ const TreatmentCard = ({ treatment }) => {
     degrees,
     department,
     dept_Img,
-    location,
-    fee,
-    serviceAdderName,
-    secviceAdderEmail,
-    serviceAdderImage,
+    fee
   } = treatment;
   return (
     <div>

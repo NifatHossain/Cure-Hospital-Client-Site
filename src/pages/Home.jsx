@@ -5,15 +5,15 @@ import AllTreatmentCards from "../components/AllTreatmentCards";
 
 const Home = () => {
     return (
-        <div>
+        <div className="mb-6">
             <Helmet>
                 <title>Cure Hospital- HomePage</title>
             </Helmet>
             <Slider></Slider>
             <div className="max-w-7xl mx-auto">
                 <AllTreatmentCards></AllTreatmentCards>
+             </div>
 
-            </div>
         </div>
     );
 };
