@@ -35,7 +35,7 @@ const Slider = () => {
                             <div className="absolute inset-0 backdrop-blur-2xl"></div>
                             <div className="flex gap-6 items-center">
                                 <div className="animate__animated animate__backInUp"><img src="https://i.ibb.co/kxbgWMc/slider2-image.png" alt="" /></div>
-                                <div className="flex flex-col gap-3">
+                                <div className="flex flex-col gap-3 scale-50 md:scale-100">
                                     <div className="flex items-center  gap-2 animate__animated animate__fadeInRight animate__delay-2s">
                                         <p className="text-3xl  font-bold">Our Features</p>
                                     </div>
@@ -70,8 +70,8 @@ const Slider = () => {
                             <div className="absolute inset-0 backdrop-blur-xl"></div>
                             <div className="flex flex-row-reverse gap-6 items-center">
                                 <Slide direction='right'><div className=""><img src="https://i.ibb.co/nRLZbTz/slider3-image.png" alt="" /></div></Slide>
-                                <div className="flex flex-col gap-3">
-                                    <Slide direction='down'><div className="flex items-center  gap-2 ">
+                                <div className="flex flex-col gap-3 scale-50 md:scale-100">
+                                    <Slide direction='down'><div className="flex  items-center  gap-2 ">
                                         <p className="text-3xl  font-bold">Our Services</p>
                                     </div></Slide>
                                     <Slide direction='left' ><div className="flex items-center  gap-2 ">
@@ -105,7 +105,7 @@ const Slider = () => {
                             <div className="absolute inset-0 backdrop-blur-xl"></div>
                             <div className="flex flex-row-reverse gap-6 items-center">
                                 <Slide direction='right'><div className="h-full w-[130%]"><img src="https://i.ibb.co/9WcT6vt/slider1-image.png" alt="" /></div></Slide>
-                                <div className="flex flex-col gap-3 w-1/2">
+                                <div className="flex flex-col gap-3 w-3/4 md:w-1/2 scale-[.25] md:scale-100">
                                     <Slide direction='down'><div className="flex items-center  gap-2 ">
                                         <p className="text-3xl font-bold">Technology Meets Experience</p>
                                     </div></Slide>
