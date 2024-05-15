@@ -13,7 +13,7 @@ const MyToDoCard = ({appointment}) => {
         setNewStatus(e);
         console.log(newStatus);
         const updateStatus= {newStatus}
-        fetch(`http://localhost:5000/bookedappointment/${_id}`,{
+        fetch(`https://cure-hospital-server.vercel.app/bookedappointment/${_id}`,{
             method:'PATCH',
             headers: {
                 "Content-Type": "application/json",

@@ -75,7 +75,7 @@ const router = createBrowserRouter([
       {
         path:'todo/:email',
         element:<PrivateRoute><ServicesToDo></ServicesToDo></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/todo/${params.email}`)
+        loader:({params})=>fetch(`https://cure-hospital-server.vercel.app/todo/${params.email}`)
       }
 
     ]

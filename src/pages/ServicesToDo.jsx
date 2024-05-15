@@ -17,10 +17,10 @@ const ServicesToDo = () => {
     return (
         <div className="bg-blue-100 min-h-[100vh] pt-5">
             <Helmet>
-                <title>My Appointments</title>
+                <title>My To Do List</title>
             </Helmet>
         <div className="max-w-6xl mx-auto ">
-            <h2 className="text-3xl font-semibold text-center border-x-8 border-blue-500 p-4 bg-blue-300 mb-7">My Services</h2>
+            <h2 className="text-3xl font-semibold text-center border-x-8 border-blue-500 p-4 bg-blue-300 mb-7">My To Do List</h2>
         <div className="grid gap-4 grid-cols-3">
             
             {
