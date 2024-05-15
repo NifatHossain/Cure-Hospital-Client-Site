@@ -22,7 +22,7 @@ const AddTreatments = () => {
         const treatmentData= {doctorName,image, degrees,department, dept_Img, location, fee, serviceAdderName, secviceAdderEmail,serviceAdderImage}
         console.log(treatmentData);
         form.reset();
-        fetch('http://localhost:5000/addtreatments',{
+        fetch('https://cure-hospital-server.vercel.app/addtreatments',{
             method:'POST',
             headers: {
                 "Content-Type": "application/json",

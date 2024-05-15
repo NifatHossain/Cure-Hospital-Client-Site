@@ -26,7 +26,7 @@ const UpdateTreatmentPage = () => {
         const updatedTreatmentData= {doctorName,image, degrees,department, dept_Img, location, fee, serviceAdderName,serviceAdderImage}
         console.log(updatedTreatmentData);
         form.reset();
-        fetch(`http://localhost:5000/updatetreatment/${_id}`,{
+        fetch(`https://cure-hospital-server.vercel.app/updatetreatment/${_id}`,{
             method:'PATCH',
             headers: {
                 "Content-Type": "application/json",

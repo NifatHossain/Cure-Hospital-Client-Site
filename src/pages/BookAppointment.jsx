@@ -20,7 +20,7 @@ const BookAppointment = () => {
         const symptoms= form.symptoms.value;
         const appointmentData= {doctorName,date,symptoms,patientEmail,status,department,fee,location,treatmentId,secviceAdderEmail,image}
         form.reset();
-        fetch('http://localhost:5000/addappointment',{
+        fetch('https://cure-hospital-server.vercel.app/addappointment',{
             method:'POST',
             headers: {
                 "Content-Type": "application/json",

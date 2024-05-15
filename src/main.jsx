@@ -44,32 +44,32 @@ const router = createBrowserRouter([
       {
         path:'/alltreatments',
         element:<AllTreatmentsPage></AllTreatmentsPage>,
-        loader:()=>fetch('http://localhost:5000/alltreatments')
+        loader:()=>fetch('https://cure-hospital-server.vercel.app/alltreatments')
       },
       {
         path: '/carddetails/:id',
         element:<PrivateRoute><CardDetailsPage></CardDetailsPage></PrivateRoute>,
-        loader: ({params})=>fetch(`http://localhost:5000/carddetails/${params.id}`)
+        loader: ({params})=>fetch(`https://cure-hospital-server.vercel.app/carddetails/${params.id}`)
       },
       {
         path:'/bookappointment/:id',
         element: <PrivateRoute><BookAppointment></BookAppointment></PrivateRoute>,
-        loader: ({params})=>fetch(`http://localhost:5000/carddetails/${params.id}`)
+        loader: ({params})=>fetch(`https://cure-hospital-server.vercel.app/carddetails/${params.id}`)
       },
       {
         path:'/alltreatments/:email',
         element:<PrivateRoute><ManageMyServices></ManageMyServices></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/alltreatments/${params.email}`)
+        loader:({params})=>fetch(`https://cure-hospital-server.vercel.app/alltreatments/${params.email}`)
       },
       {
         path:'/updatetreatment/:id',
         element:<PrivateRoute><UpdateTreatmentPage></UpdateTreatmentPage></PrivateRoute>,
-        loader: ({params})=>fetch(`http://localhost:5000/carddetails/${params.id}`)
+        loader: ({params})=>fetch(`https://cure-hospital-server.vercel.app/carddetails/${params.id}`)
       },
       {
         path:'/bookedappointments/:email',
         element:<PrivateRoute><BookedAppointments></BookedAppointments></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/bookedappointments/${params.email}`)
+        loader:({params})=>fetch(`https://cure-hospital-server.vercel.app/bookedappointments/${params.email}`)
       },
 
     ]
