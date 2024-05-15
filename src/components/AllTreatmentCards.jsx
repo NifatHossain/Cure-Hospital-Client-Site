@@ -17,7 +17,7 @@ const AllTreatmentCards = () => {
       <h2 className="text-3xl font-semibold border-l-8 border-blue-500 p-4 bg-blue-100 my-6 ">
         Our Treatments
       </h2>
-      <div className="grid grid-cols-3">
+      <div className="grid gap-5 grid-cols-3">
         {treatments.map((treatment, idx) => (
           <TreatmentCard key={idx} treatment={treatment}></TreatmentCard>
         ))}
