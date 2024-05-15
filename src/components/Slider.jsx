@@ -29,7 +29,7 @@ const Slider = () => {
                 modules={[Autoplay, Pagination, Navigation, EffectFade]}
                 className="mySwiper"
             >
-                <SwiperSlide className="my-5"> 
+                <SwiperSlide className=""> 
                 {/* style={{backgroundImage: "url('https://i.ibb.co/zP3M0Sg/slider1.jpg')"}} */}
                     <div className="bg-cover bg-center h-[250px] md:h-[580px] flex flex-col justify-center items-center p-5 lg:px-40 bg-slate-200" >
                             <div className="absolute inset-0 backdrop-blur-2xl"></div>

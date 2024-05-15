@@ -14,6 +14,7 @@ import ErrorPage from './pages/ErrorPage';
 import AddTreatments from './pages/AddTreatments';
 import PrivateRoute from './fireBase/PrivateRoute';
 import AllTreatmentsPage from './pages/AllTreatmentsPage';
+import CardDetailsPage from './pages/CardDetailsPage';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
         path:'/alltreatments',
         element:<AllTreatmentsPage></AllTreatmentsPage>,
         loader:()=>fetch('http://localhost:5000/alltreatments')
+      },
+      {
+        path: '/carddetails/:id',
+        element:<PrivateRoute><CardDetailsPage></CardDetailsPage></PrivateRoute>,
+        loader: ({params})=>fetch(`http://localhost:5000/carddetails/${params.id}`)
       }
 
     ]
