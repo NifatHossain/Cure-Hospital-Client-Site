@@ -38,7 +38,7 @@ const MyTreatmentCard = ({treatment}) => {
             .then(res=>res.json())
             .then(data=>{
                 if (data.deletedCount === 1) {
-                    console.log("Successfully deleted one document.");
+                    // console.log("Successfully deleted one document.");
                     setDeleteClicked(true);
                     swalWithBootstrapButtons.fire({
                         title: "Deleted!",
@@ -52,7 +52,7 @@ const MyTreatmentCard = ({treatment}) => {
                         icon: 'error',
                         confirmButtonText: 'okay'
                     })
-                    console.log("No documents matched the query. Deleted 0 documents.");
+                    // console.log("No documents matched the query. Deleted 0 documents.");
                 }
             })
               

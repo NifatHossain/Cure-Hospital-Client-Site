@@ -20,7 +20,7 @@ const AddTreatments = () => {
         const secviceAdderEmail= user.email;
         const serviceAdderImage= user.photoURL;
         const treatmentData= {doctorName,image, degrees,department, dept_Img, location, fee, serviceAdderName, secviceAdderEmail,serviceAdderImage}
-        console.log(treatmentData);
+        // console.log(treatmentData);
         form.reset();
         fetch('https://cure-hospital-server.vercel.app/addtreatments',{
             method:'POST',
@@ -31,7 +31,7 @@ const AddTreatments = () => {
         })
         .then(res=>res.json())
         .then(data=>{
-            console.log(data)
+            // console.log(data)
             if(data.acknowledged===true){
                 Swal.fire({
                     title: 'Success',

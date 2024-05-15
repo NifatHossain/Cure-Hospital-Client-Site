@@ -11,7 +11,7 @@ const MyToDoCard = ({appointment}) => {
     const [newStatus, setNewStatus]= useState('Pending');
     const handleUpdateStatus =(e)=>{
         setNewStatus(e);
-        console.log(newStatus);
+        // console.log(newStatus);
         const updateStatus= {newStatus}
         fetch(`https://cure-hospital-server.vercel.app/bookedappointment/${_id}`,{
             method:'PATCH',
@@ -22,7 +22,7 @@ const MyToDoCard = ({appointment}) => {
         })
         .then(res=>res.json())
         .then(data=>{
-            console.log(data)
+            // console.log(data)
             if(data.modifiedCount>0){
                 Swal.fire({
                     title: 'Success',

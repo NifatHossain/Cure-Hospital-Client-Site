@@ -15,11 +15,11 @@ const Register = () => {
         const password= form.password.value;
         const image= form.image.value;
         registerUser(email,password)
-        .then((user)=>{
-            console.log(user.user)
+        .then(()=>{
+            // console.log(user.user)
             updateUserInfo(name,image)
             .then(() => {
-                console.log('User info updated')
+                // console.log('User info updated')
                 form.reset();
                 Swal.fire({
                     title: 'Success',
@@ -28,8 +28,8 @@ const Register = () => {
                     confirmButtonText: 'okay'
                   })
               })
-              .catch((error) => {
-                console.log(error.message);
+              .catch(() => {
+                // console.log(error.message);
                 Swal.fire({
                     title: 'Error',
                     text: 'Failed to  Register',
@@ -38,8 +38,8 @@ const Register = () => {
                   })
               });
         })
-        .catch(error=>{
-            console.log(error.message)
+        .catch(()=>{
+            // console.log(error.message)
         })
     }
     return (

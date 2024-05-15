@@ -7,11 +7,11 @@ import Swal from "sweetalert2";
 
 const Navbar = () => {
     const {user,userLogOut}=useContext(AuthContext)
-    console.log(user);
+    // console.log(user);
     const handleLogOut=()=>{
         userLogOut()
         .then(()=>{
-            console.log('Successfully Logged Out')
+            // console.log('Successfully Logged Out')
             Swal.fire({
                 title: 'Success',
                 text: 'Successfully Logged Out',
@@ -19,8 +19,8 @@ const Navbar = () => {
                 confirmButtonText: 'okay'
               })
         })
-        .catch((error)=>{
-            console.log(error.message)
+        .catch(()=>{
+            // console.log(error.message)
             Swal.fire({
                 title: 'Error',
                 text: 'Failed to Log Out',

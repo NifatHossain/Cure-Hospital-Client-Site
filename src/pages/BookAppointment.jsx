@@ -29,7 +29,7 @@ const BookAppointment = () => {
         })
         .then(res=>res.json())
         .then(data=>{
-            console.log(data)
+            // console.log(data)
             if(data.acknowledged===true){
                 Swal.fire({
                     title: 'Success',

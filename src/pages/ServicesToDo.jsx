@@ -7,7 +7,7 @@ import MyToDoCard from "../components/MyToDoCard";
 const ServicesToDo = () => {
     const appointments= useLoaderData()
     const length= appointments.length;
-    console.log(length)
+    // console.log(length)
     if(length<1){
         return <>
             <Lottie className="border-4 w-1/2 mx-auto" animationData={noData} />

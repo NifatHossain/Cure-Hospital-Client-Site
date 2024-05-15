@@ -15,7 +15,7 @@ const Login =() => {
         const email= form.email.value;
         const password= form.password.value;
         signInUser(email,password)
-        .then(result=>{
+        .then(()=>{
             Swal.fire({
                 title: 'Success',
                 text: 'Login Successful',
@@ -23,40 +23,40 @@ const Login =() => {
                 confirmButtonText: 'okay'
               })
             setTimeout(()=>navigate(location?.state? location.state:'/'),2000)
-            console.log(result.user)
+            // console.log(result.user)
         })
-        .catch(error=>{
+        .catch(()=>{
             Swal.fire({
                 title: 'Error',
                 text: 'Failed to  Loginr',
                 icon: 'Error',
                 confirmButtonText: 'okay'
               })
-            console.log(error.message)
+            // console.log(error.message)
         })
         form.reset();
     }
     const handleGoogleLogIn=()=>{
         googleSignIn()
-        .then(result=>{
+        .then(()=>{
             Swal.fire({
                 title: 'Success',
                 text: 'Login Successful',
                 icon: 'success',
                 confirmButtonText: 'okay'
               })
-            console.log(result.user)
+            // console.log(result.user)
             // navigate('/updateInfo')
             setTimeout(()=>navigate(location?.state? location.state:'/'),2000)
         })
-        .catch(error=>{
+        .catch(()=>{
             Swal.fire({
                 title: 'Error',
                 text: 'Failed to Login',
                 icon: 'Error',
                 confirmButtonText: 'okay'
               })
-            console.log(error.message)
+            // console.log(error.message)
         })
     }
 
