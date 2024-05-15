@@ -69,7 +69,7 @@ const Slider = () => {
                     <div className="bg-cover bg-center h-[250px] md:h-[590px] flex flex-col justify-center items-center p-5 lg:px-40 " style={{backgroundImage: "url('https://i.ibb.co/y0ptBHP/slider-4.jpg')"}} >
                             <div className="absolute inset-0 backdrop-blur-xl"></div>
                             <div className="flex flex-row-reverse gap-6 items-center">
-                                <Slide direction='up'><div className=""><img src="https://i.ibb.co/nRLZbTz/slider3-image.png" alt="" /></div></Slide>
+                                <Slide direction='right'><div className=""><img src="https://i.ibb.co/nRLZbTz/slider3-image.png" alt="" /></div></Slide>
                                 <div className="flex flex-col gap-3">
                                     <Slide direction='down'><div className="flex items-center  gap-2 ">
                                         <p className="text-3xl  font-bold">Our Services</p>

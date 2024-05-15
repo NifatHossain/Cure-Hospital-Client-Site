@@ -1,8 +1,17 @@
-# React + Vite
+# Cure Hospital
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A website where patients can look for desired doctors and book appointment.
 
-Currently, two official plugins are available:
+## Visit Website
+[Live site](https://cure-hospital-f4a48.web.app/) : https://cure-hospital-f4a48.web.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+1. Website has login and registration system developed by Firebase
+
+2. Mongodb used as website database
+
+3. server site has been deployed at vercel.
+
+4. Client site/ frontend has been deployed at firebase
+
+5. website is responsible for all devices
