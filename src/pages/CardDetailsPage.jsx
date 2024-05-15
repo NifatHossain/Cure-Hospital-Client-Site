@@ -35,7 +35,7 @@ const CardDetailsPage = () => {
                 <p><span className=" font-semibold">Qualifications: </span>{degrees}</p>
                 <p><span className=" font-semibold">Address: </span> {location}</p>
                 <p className=" font-semibold">Appointment fee: {fee}</p>
-                <Link to={`/bookappointment/_id?email=${secviceAdderEmail}`} className="px-3 font-bold py-3 max-w-44 flex items-center border-2 border-blue-500 text-blue-500  hover:bg-blue-500 hover:text-white">Book Appointment</Link>
+                <Link to={`/bookappointment/${_id}?email=${secviceAdderEmail}`} className="px-3 font-bold py-3 max-w-44 flex items-center border-2 border-blue-500 text-blue-500  hover:bg-blue-500 hover:text-white">Book Appointment</Link>
 
             </div>
             </div>

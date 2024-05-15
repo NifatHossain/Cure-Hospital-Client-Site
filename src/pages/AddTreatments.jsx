@@ -51,9 +51,9 @@ const AddTreatments = () => {
                     <p className="text-slate-400 font-medium">Doctors Name</p>
                     <input type="text" name="doctorName" className="p-3 bg-slate-100 w-1/2 border rounded-md" required/>
                     <p className="text-slate-400 font-medium">Doctors Image URL</p>
-                    <input type="text" name="image" className="p-3 bg-slate-100 w-1/2 border rounded-md" required/>
+                    <input type="text" name="image" className="p-3 bg-slate-100 w-1/2 border rounded-md" placeholder="image ratio must be 3:2" required/>
                     <p className="text-slate-400 font-medium">Doctor&apos;s Qualifications</p>
-                    <input type="text" name="degrees" className="p-3 bg-slate-100 w-1/2 border rounded-md" required/>
+                    <input type="text" name="degrees" className="p-3 bg-slate-100 w-1/2 border rounded-md" placeholder="within 50-57 words" required/>
                     <div className="flex flex-col md:flex-row  gap-3">
                         <div className="">
                             <p className="text-slate-400 font-medium">Enter Department</p>
@@ -61,7 +61,7 @@ const AddTreatments = () => {
                         </div>
                         <div>
                             <p className="text-slate-400 font-medium">Department Image</p>
-                            <input type="text" name="dept_Img" className="p-3 bg-slate-100 w-1/2 md:w-full border rounded-md" required/>
+                            <input type="text" name="dept_Img" className="p-3 bg-slate-100 w-1/2 md:w-full border rounded-md" placeholder="image ratio must be 19:9" required/>
                         </div>
                     </div>
                     <p className="text-slate-400 font-medium">Location</p>
