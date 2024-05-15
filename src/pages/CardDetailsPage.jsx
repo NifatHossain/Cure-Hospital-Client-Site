@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { Link, useLoaderData } from "react-router-dom";
 
 
@@ -6,6 +7,9 @@ const CardDetailsPage = () => {
     const {_id,doctorName,image, degrees,department, dept_Img, location, fee, serviceAdderName, secviceAdderEmail,serviceAdderImage}= details;
     return (
         <div className="bg-blue-100 py-7">
+            <Helmet>
+                <title>Treatment Details</title>
+            </Helmet>
         <div className="max-w-7xl mx-auto">
              <h2 className="text-3xl font-semibold text-center border-x-8 border-blue-500 p-4 bg-blue-300 mb-7">Appointment Details</h2>
              <div className="flex flex-col-reverse md:flex-row gap-3">

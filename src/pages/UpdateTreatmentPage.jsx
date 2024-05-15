@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../fireBase/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 
 const UpdateTreatmentPage = () => {
@@ -56,6 +57,9 @@ const UpdateTreatmentPage = () => {
     }
     return (
         <div className="">
+            <Helmet>
+                <title>Updaed Treatment</title>
+            </Helmet>
             <div className="p-6 bg-slate-200">
                 <p className="p-2 w-fit bg-blue-400 rounded-md text-white font-bold">Add New Treatment</p>
             </div>

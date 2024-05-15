@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -9,35 +10,67 @@ const MyTreatmentCard = ({treatment}) => {
         image,
         department,
         fee
-      } = treatment;
+    } = treatment;
+    const [deleteClicked, setDeleteClicked]=useState(false);
 
     const handleDeleteTreatment=()=>{
-        fetch(`http://localhost:5000/deletetreatment/${_id}`,{
-            method:'DELETE',
-        })
-        .then(res=>res.json())
-        .then(data=>{
-            if (data.deletedCount === 1) {
-                console.log("Successfully deleted one document.");
-                Swal.fire({
-                    title: 'Success',
-                    text:'deleted information Successfully. PLEASE RELOAD PAGE',
-                    icon: 'success',
-                    confirmButtonText: 'okay'
-                })
-              } else {
-                Swal.fire({
-                    title: 'Error',
-                    text:'Data was not updated',
-                    icon: 'error',
-                    confirmButtonText: 'okay'
-                })
-                console.log("No documents matched the query. Deleted 0 documents.");
-              }
-        })
+        
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+              confirmButton: "btn btn-success",
+              cancelButton: "btn btn-danger"
+            },
+            buttonsStyling: false
+          });
+          swalWithBootstrapButtons.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Yes, delete it!",
+            cancelButtonText: "No, cancel!",
+            reverseButtons: true
+          }).then((result) => {
+            if (result.isConfirmed) {
+            fetch(`http://localhost:5000/deletetreatment/${_id}`,{
+                method:'DELETE',
+            })
+            .then(res=>res.json())
+            .then(data=>{
+                if (data.deletedCount === 1) {
+                    console.log("Successfully deleted one document.");
+                    setDeleteClicked(true);
+                    swalWithBootstrapButtons.fire({
+                        title: "Deleted!",
+                        text: "Your file has been deleted.",
+                        icon: "success"
+                      });
+                } else {
+                    Swal.fire({
+                        title: 'Error',
+                        text:'Data was not updated',
+                        icon: 'error',
+                        confirmButtonText: 'okay'
+                    })
+                    console.log("No documents matched the query. Deleted 0 documents.");
+                }
+            })
+              
+            } else if (
+              /* Read more about handling dismissals below */
+              result.dismiss === Swal.DismissReason.cancel
+            ) {
+              swalWithBootstrapButtons.fire({
+                title: "Cancelled",
+                text: "Your file is safe :)",
+                icon: "error"
+              });
+            }
+          });
+          
     }  
     return (
-        <div className="bg-white max-w-80 p-4  rounded-md">
+        <div className={deleteClicked?'hidden':"bg-white max-w-80 p-4  rounded-md "}>
 
         <h2 className="text-lg font-bold">{department}</h2>
         <div className="flex flex-col ">

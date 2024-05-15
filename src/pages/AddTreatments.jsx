@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../fireBase/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 
 const AddTreatments = () => {
@@ -43,6 +44,9 @@ const AddTreatments = () => {
     }
     return (
         <div className="">
+            <Helmet>
+                <title>Add New Treatment</title>
+            </Helmet>
             <div className="p-6 bg-slate-200">
                 <p className="p-2 w-fit bg-blue-400 rounded-md text-white font-bold">Add New Treatment</p>
             </div>
