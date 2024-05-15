@@ -18,6 +18,7 @@ import CardDetailsPage from './pages/CardDetailsPage';
 import BookAppointment from './pages/BookAppointment';
 import ManageMyServices from './pages/ManageMyServices';
 import UpdateTreatmentPage from './pages/UpdateTreatmentPage';
+import BookedAppointments from './pages/BookedAppointments';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -64,7 +65,12 @@ const router = createBrowserRouter([
         path:'/updatetreatment/:id',
         element:<PrivateRoute><UpdateTreatmentPage></UpdateTreatmentPage></PrivateRoute>,
         loader: ({params})=>fetch(`http://localhost:5000/carddetails/${params.id}`)
-      }
+      },
+      {
+        path:'/bookedappointments/:email',
+        element:<PrivateRoute><BookedAppointments></BookedAppointments></PrivateRoute>,
+        loader:({params})=>fetch(`http://localhost:5000/bookedappointments/${params.email}`)
+      },
 
     ]
   },

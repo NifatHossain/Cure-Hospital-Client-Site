@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 
 const BookAppointment = () => {
     const appointmentDetails= useLoaderData();
-    const {_id,doctorName,department, dept_Img, location, fee, secviceAdderEmail}= appointmentDetails;
+    const {_id,doctorName,department, dept_Img, location, fee, secviceAdderEmail,image}= appointmentDetails;
     const{user}=useContext(AuthContext)
     const patientEmail= user.email;
     const treatmentId= _id;
@@ -18,7 +18,7 @@ const BookAppointment = () => {
         const date= form.date.value;
         const status= 'pending';
         const symptoms= form.symptoms.value;
-        const appointmentData= {doctorName,date,symptoms,patientEmail,status,department,fee,location,treatmentId,secviceAdderEmail}
+        const appointmentData= {doctorName,date,symptoms,patientEmail,status,department,fee,location,treatmentId,secviceAdderEmail,image}
         form.reset();
         fetch('http://localhost:5000/addappointment',{
             method:'POST',
@@ -33,7 +33,7 @@ const BookAppointment = () => {
             if(data.acknowledged===true){
                 Swal.fire({
                     title: 'Success',
-                    text:'Successfully Requested for Appointment',
+                    text:'Appointment Booked Successfully',
                     icon: 'success',
                     confirmButtonText: 'okay'
                 })
