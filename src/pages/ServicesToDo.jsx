@@ -1,17 +1,17 @@
+import Lottie from "lottie-react";
 import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
-import MyAppointmentCards from "../components/MyAppointmentCards";
-import Lottie from "lottie-react";
 import noData from "../../noDataAdded.json"
+import MyToDoCard from "../components/MyToDoCard";
 
-const BookedAppointments = () => {
-    const appointments= useLoaderData();
+const ServicesToDo = () => {
+    const appointments= useLoaderData()
     const length= appointments.length;
     console.log(length)
     if(length<1){
         return <>
             <Lottie className="border-4 w-1/2 mx-auto" animationData={noData} />
-            <p className="text-xl font-bold text-center">It seems you did not add anything</p>
+            <p className="text-xl font-bold text-center">It seems there is currently no Task </p>
         </>
     }
     return (
@@ -25,7 +25,7 @@ const BookedAppointments = () => {
             
             {
                 
-                appointments.map((appointment,idx)=><MyAppointmentCards key={idx} appointment={appointment}></MyAppointmentCards>)
+                appointments.map((appointment,idx)=><MyToDoCard key={idx} appointment={appointment}></MyToDoCard >)
             }
         </div>
         </div>
@@ -33,4 +33,4 @@ const BookedAppointments = () => {
     );
 };
 
-export default BookedAppointments;
+export default ServicesToDo;

@@ -19,6 +19,7 @@ import BookAppointment from './pages/BookAppointment';
 import ManageMyServices from './pages/ManageMyServices';
 import UpdateTreatmentPage from './pages/UpdateTreatmentPage';
 import BookedAppointments from './pages/BookedAppointments';
+import ServicesToDo from './pages/ServicesToDo';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -71,6 +72,11 @@ const router = createBrowserRouter([
         element:<PrivateRoute><BookedAppointments></BookedAppointments></PrivateRoute>,
         loader:({params})=>fetch(`https://cure-hospital-server.vercel.app/bookedappointments/${params.email}`)
       },
+      {
+        path:'todo/:email',
+        element:<PrivateRoute><ServicesToDo></ServicesToDo></PrivateRoute>,
+        loader:({params})=>fetch(`http://localhost:5000/todo/${params.email}`)
+      }
 
     ]
   },

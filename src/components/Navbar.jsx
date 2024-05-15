@@ -50,6 +50,7 @@ const Navbar = () => {
                                         <li><Link to={`/addtreatments`} className="font-semibold">Add New Treatment</Link></li>
                                         <li><Link to={`/alltreatments/${user?.email}`} className="font-semibold">Show My Services</Link></li>
                                         <li><Link to={`/bookedappointments/${user?.email}`} className="font-semibold">Booked Appointments</Link></li>
+                                        <li><Link to={`/todo/${user?.email}`} className="font-semibold">Services to do</Link></li>
                                     </ul>
                                 </li>
                             </div>
@@ -74,6 +75,7 @@ const Navbar = () => {
                                         <li><Link to={`/addtreatments`} className="font-semibold">Add New Treatment</Link></li>
                                         <li><Link to={`/alltreatments/${user?.email}`} className="font-semibold">Show My Services</Link></li>
                                         <li><Link to={`/bookedappointments/${user?.email}`} className="font-semibold">Booked Appointments</Link></li>
+                                        <li><Link to={`/todo/${user?.email}`} className="font-semibold">Services to do</Link></li>
                                         </ul>
                                     </details>
                                 </li>
