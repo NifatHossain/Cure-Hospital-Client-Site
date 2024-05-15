@@ -49,8 +49,8 @@ const MyTreatmentCard = ({treatment}) => {
                 </div>
             </Link> 
             <div className="flex gap-4 my-3">
-            <Link to={'/alltreatments'} className="px-3 py-3 flex items-center border-2 border-blue-500 text-blue-500  hover:bg-blue-500 hover:text-white">Update Info</Link>
-            <Link to={'/alltreatments'} className="px-3 py-3 flex items-center border-2 border-red-500 text-red-500  hover:bg-red-500 hover:text-white">Delete</Link>
+            <Link to={`/updatetreatment/${_id}`} className="px-3 py-3 flex items-center border-2 border-blue-500 text-blue-500  hover:bg-blue-500 hover:text-white">Update Info</Link>
+            <Link to={`/deletetreatment/${_id}`} className="px-3 py-3 flex items-center border-2 border-red-500 text-red-500  hover:bg-red-500 hover:text-white">Delete</Link>
             </div>
         </div>
         </div>
