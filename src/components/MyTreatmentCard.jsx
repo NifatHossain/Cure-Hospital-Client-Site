@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const MyTreatmentCard = ({treatment}) => {
@@ -9,6 +10,32 @@ const MyTreatmentCard = ({treatment}) => {
         department,
         fee
       } = treatment;
+
+    const handleDeleteTreatment=()=>{
+        fetch(`http://localhost:5000/deletetreatment/${_id}`,{
+            method:'DELETE',
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            if (data.deletedCount === 1) {
+                console.log("Successfully deleted one document.");
+                Swal.fire({
+                    title: 'Success',
+                    text:'deleted information Successfully. PLEASE RELOAD PAGE',
+                    icon: 'success',
+                    confirmButtonText: 'okay'
+                })
+              } else {
+                Swal.fire({
+                    title: 'Error',
+                    text:'Data was not updated',
+                    icon: 'error',
+                    confirmButtonText: 'okay'
+                })
+                console.log("No documents matched the query. Deleted 0 documents.");
+              }
+        })
+    }  
     return (
         <div className="bg-white max-w-80 p-4  rounded-md">
 
@@ -50,7 +77,7 @@ const MyTreatmentCard = ({treatment}) => {
             </Link> 
             <div className="flex gap-4 my-3">
             <Link to={`/updatetreatment/${_id}`} className="px-3 py-3 flex items-center border-2 border-blue-500 text-blue-500  hover:bg-blue-500 hover:text-white">Update Info</Link>
-            <Link to={`/deletetreatment/${_id}`} className="px-3 py-3 flex items-center border-2 border-red-500 text-red-500  hover:bg-red-500 hover:text-white">Delete</Link>
+            <p onClick={handleDeleteTreatment} className="px-3 py-3 flex items-center border-2 border-red-500 text-red-500  hover:bg-red-500 hover:text-white">Delete</p>
             </div>
         </div>
         </div>
