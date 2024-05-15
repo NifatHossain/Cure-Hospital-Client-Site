@@ -12,7 +12,7 @@ const TreatmentCard = ({ treatment }) => {
   } = treatment;
   return (
     <Link to={`/carddetails/${_id}`}>
-      <div className="max-w-80 mb-20 border cursor-pointer p-5 relative bg-white rounded-lg shadow-md hover:scale-105 hover:shadow-lg transition duration-300">
+      <div className="max-w-80 gap-4 border cursor-pointer p-5 relative bg-white rounded-lg shadow-md hover:scale-105 hover:shadow-lg transition duration-300">
         <div className="absolute inset-0 bg-blue-600 opacity-0 hover:opacity-60  rounded-lg transition-opacity duration-300 flex items-center justify-center">
           <span className="text-white text-xl font-bold">View Details</span>
         </div>

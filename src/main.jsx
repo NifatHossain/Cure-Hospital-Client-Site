@@ -16,6 +16,7 @@ import PrivateRoute from './fireBase/PrivateRoute';
 import AllTreatmentsPage from './pages/AllTreatmentsPage';
 import CardDetailsPage from './pages/CardDetailsPage';
 import BookAppointment from './pages/BookAppointment';
+import ManageMyServices from './pages/ManageMyServices';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -52,6 +53,11 @@ const router = createBrowserRouter([
         path:'/bookappointment/:id',
         element: <PrivateRoute><BookAppointment></BookAppointment></PrivateRoute>,
         loader: ({params})=>fetch(`http://localhost:5000/carddetails/${params.id}`)
+      },
+      {
+        path:'/alltreatments/:email',
+        element:<PrivateRoute><ManageMyServices></ManageMyServices></PrivateRoute>,
+        loader:({params})=>fetch(`http://localhost:5000/alltreatments/${params.email}`)
       }
 
     ]

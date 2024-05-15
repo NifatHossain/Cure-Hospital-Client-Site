@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../fireBase/AuthProvider";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet";
@@ -11,6 +11,7 @@ const BookAppointment = () => {
     const{user}=useContext(AuthContext)
     const patientEmail= user.email;
     const treatmentId= _id;
+    const navigate= useNavigate();
     const handleBook=(e)=>{
         e.preventDefault();
         const form= e.target;
@@ -35,7 +36,8 @@ const BookAppointment = () => {
                     text:'Successfully Requested for Appointment',
                     icon: 'success',
                     confirmButtonText: 'okay'
-                  })
+                })
+                setTimeout(()=>navigate('/'),2000)
             }
         })
 

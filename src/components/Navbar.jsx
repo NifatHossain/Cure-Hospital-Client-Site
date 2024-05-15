@@ -48,7 +48,7 @@ const Navbar = () => {
                                     <a className="font-semibold">Dashboard</a>
                                     <ul className="p-2">
                                         <li><Link to={`/addtreatments`} className="font-semibold">Add New Treatment</Link></li>
-                                        <li><Link to={`/viewmytreatments/${user?.email}`} className="font-semibold">Show My Treatments</Link></li>
+                                        <li><Link to={`/alltreatments/${user?.email}`} className="font-semibold">Show My Treatments</Link></li>
                                     </ul>
                                 </li>
                             </div>
@@ -71,7 +71,7 @@ const Navbar = () => {
                                         <summary className="font-semibold">Dashboards</summary>
                                         <ul className="p-2">
                                         <li><Link to={`/addtreatments`} className="font-semibold">Add New Treatment</Link></li>
-                                        <li><Link to={`/viewmytreatments/${user?.email}`} className="font-semibold">Show My Treatments</Link></li>
+                                        <li><Link to={`/alltreatments/${user?.email}`} className="font-semibold">Show My Treatments</Link></li>
                                         </ul>
                                     </details>
                                 </li>
