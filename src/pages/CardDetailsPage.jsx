@@ -6,7 +6,7 @@ const CardDetailsPage = () => {
     const details= useLoaderData()
     const {_id,doctorName,image, degrees,department, dept_Img, location, fee, serviceAdderName, secviceAdderEmail,serviceAdderImage}= details;
     return (
-        <div className="bg-blue-100 py-7">
+        <div className="py-7">
             <Helmet>
                 <title>Treatment Details</title>
             </Helmet>
