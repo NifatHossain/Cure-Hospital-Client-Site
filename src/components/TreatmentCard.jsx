@@ -21,7 +21,7 @@ const TreatmentCard = ({ treatment }) => {
             <img src={dept_Img} />
           </div>
         </div>
-        <h2 className="text-lg font-bold">{department}</h2>
+        <h2 className="text-lg font-bold text-black">{department}</h2>
         <div className="flex items-center gap-3 border  bg-slate-200">
           <div className="avatar">
             <div className="w-24 rounded">
@@ -29,9 +29,9 @@ const TreatmentCard = ({ treatment }) => {
             </div>
           </div>
           <div className="bg-slate-200">
-            <p className="font-semibold">{doctorName}</p>
-            <p>{degrees}</p>
-            <p>
+            <p className="font-semibold text-black">{doctorName}</p>
+            <p className="text-black">{degrees}</p>
+            <p className="text-black">
               {" "}
               <span className="font-semibold">Appointment: </span> {fee}
             </p>

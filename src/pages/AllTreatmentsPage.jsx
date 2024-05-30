@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet";
 const AllTreatmentsPage = () => {
     const allTreatments= useLoaderData()
     return (
-        <div className="bg-blue-100 pt-5">
+        <div className=" pt-5">
             <Helmet>
                 <title>All Available Treatments</title>
             </Helmet>

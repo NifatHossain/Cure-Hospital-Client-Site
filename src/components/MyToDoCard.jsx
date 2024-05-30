@@ -43,9 +43,9 @@ const MyToDoCard = ({appointment}) => {
         })
     }
     return (
-        <div className="bg-white max-w-80 p-4  rounded-md ">
+        <div className="bg-white max-w-80 p-4  rounded-md border-2 ">
 
-        <h2 className="text-lg font-bold">{department}</h2>
+        <h2 className="text-lg font-bold text-black">{department}</h2>
         <div className="flex flex-col ">
            {/* <Link to={`/carddetails/${_id}`}>
                 <div className="max-w-80 mb-20 border cursor-pointer p-5 relative bg-white rounded-lg shadow-md hover:scale-105 hover:shadow-lg transition duration-300">
@@ -71,9 +71,9 @@ const MyToDoCard = ({appointment}) => {
                         </div>
                     </div>
                     <div className="bg-slate-200">
-                        <p className="font-semibold">{doctorName}</p>
+                        <p className="font-semibold text-black">{doctorName}</p>
                         {/* <p>{degrees}</p> */}
-                        <p>
+                        <p className="text-black">
                         {" "}
                         <span className="font-semibold">Appointment: </span> {fee}
                         </p>
@@ -82,15 +82,15 @@ const MyToDoCard = ({appointment}) => {
                 </div>
             </Link> 
             <div className=" my-3">
-                <p><span className="font-bold">Symptoms: </span>{symptoms}</p>
-                <p><span className="font-bold">Appointment Date: </span>{date}</p>
-                <p><span className="font-bold">Location: </span>{location}</p>
-                <p><span className="font-bold">Patient Email: </span>{patientEmail}</p>
-                <p className="font-bold"><span className="font-bold">Current Status: </span>{status}</p>
+                <p className="text-black"><span className="font-bold">Symptoms: </span>{symptoms}</p>
+                <p className="text-black"><span className="font-bold">Appointment Date: </span>{date}</p>
+                <p className="text-black"><span className="font-bold">Location: </span>{location}</p>
+                <p className="text-black"><span className="font-bold">Patient Email: </span>{patientEmail}</p>
+                <p className="font-bold text-black"><span className="font-bold">Current Status: </span>{status}</p>
                 <div>
-                    <p className="font-bold">Update Status: </p>
+                    <p className="font-bold text-black">Update Status: </p>
                     <div className="dropdown">
-                    <div tabIndex={0} role="" className="border-2 p-2 rounded-md btn bg-white">Customization Option <FaChevronDown /></div>
+                    <div tabIndex={0} role="" className="border-2 p-2 rounded-md btn ">Customization Option <FaChevronDown /></div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                         <li onClick={()=>handleUpdateStatus('Pending')}><a>Pending</a></li>
                         <li onClick={()=>handleUpdateStatus('Working')}><a>Working</a></li>

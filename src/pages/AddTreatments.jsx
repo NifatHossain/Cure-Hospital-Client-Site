@@ -73,7 +73,7 @@ const AddTreatments = () => {
                     <p className="text-slate-400 font-medium">Appointment fee</p>
                     <input type="text" name="fee" className="p-3 bg-slate-100 w-1/2 border rounded-md" placeholder="1000 tk" required/>
 
-                    <input type="submit" className="p-3 w-1/2 bg-blue-500 rounded-md font-semibold text-white cursor-pointer" value={'Add Information'} />
+                    <input type="submit" className="p-3 w-1/2 bg-blue-500 mb-6 rounded-md font-semibold text-white cursor-pointer" value={'Add Information'} />
                 </form>
             </div>
         </div>

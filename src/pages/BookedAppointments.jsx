@@ -15,7 +15,7 @@ const BookedAppointments = () => {
         </>
     }
     return (
-        <div className="bg-blue-100 min-h-[100vh] pt-5">
+        <div className=" min-h-[100vh] pt-5">
             <Helmet>
                 <title>My Appointments</title>
             </Helmet>

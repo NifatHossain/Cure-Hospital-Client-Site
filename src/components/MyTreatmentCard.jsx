@@ -70,9 +70,9 @@ const MyTreatmentCard = ({treatment}) => {
           
     }  
     return (
-        <div className={deleteClicked?'hidden':"bg-white max-w-80 p-4  rounded-md "}>
+        <div className={deleteClicked?'hidden':"bg-white max-w-80 p-4  rounded-md border-2 "}>
 
-        <h2 className="text-lg font-bold">{department}</h2>
+        <h2 className="text-lg font-bold text-black">{department}</h2>
         <div className="flex flex-col ">
            {/* <Link to={`/carddetails/${_id}`}>
                 <div className="max-w-80 mb-20 border cursor-pointer p-5 relative bg-white rounded-lg shadow-md hover:scale-105 hover:shadow-lg transition duration-300">
@@ -98,11 +98,11 @@ const MyTreatmentCard = ({treatment}) => {
                         </div>
                     </div>
                     <div className="bg-slate-200">
-                        <p className="font-semibold">{doctorName}</p>
+                        <p className="font-semibold text-black">{doctorName}</p>
                         {/* <p>{degrees}</p> */}
-                        <p>
+                        <p className="text-black">
                         {" "}
-                        <span className="font-semibold">Appointment: </span> {fee}
+                        <span className="font-semibold ">Appointment: </span> {fee}
                         </p>
                     </div>
                     </div>
