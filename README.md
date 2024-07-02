@@ -28,7 +28,7 @@ React, MongoDB, Node js, Express, Firebase,vercel, Netlify
 
 -> open command prompt in these two folders and run (npm i) to install the dependencies
 
--> create a .env.local file in root folder of client site code and your fireBasecredentials
+-> create a .env.local file in root folder of client site code and setup your fireBase credentials
 
 example:
 VITE_apiKey=***
